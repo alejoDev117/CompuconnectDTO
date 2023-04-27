@@ -26,26 +26,32 @@ public final class SoftwareDTO {
 		setNombre(UtilText.getDefaultValue());
 		setVersion(UtilText.getDefaultValue());
 		}
+	
+	
 
 	public static final SoftwareDTO create() {
 		return new SoftwareDTO();
 	}
+	
 
 	public final UUID getIdentidicador() {
 		return identificador;
 	}
 
+	
 
 	public final SoftwareDTO setIdentificador(final UUID identidicador) {
 		this.identificador = UtilUUID.getDefault(identidicador);
 		return this;
 	}
 
+	
 
 	public final String getNombre() {
 		return nombre;
 	}
 
+	
 
 	public final SoftwareDTO setNombre(final String nombre) {
 		this.nombre = UtilText.applyTrim(nombre);
@@ -53,11 +59,13 @@ public final class SoftwareDTO {
 	}
 
 
+	
 	public final String getVersion() {
 		return version;
 	}
 
 
+	
 	public final SoftwareDTO setVersion(final String version) {
 		this.version = UtilText.applyTrim(version);
 		return this;
