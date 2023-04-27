@@ -44,7 +44,7 @@ public final class CentroInformaticaDTO {
 	}
 	
 	
-	public static CentroInformaticaDTO create() {
+	public static final CentroInformaticaDTO create() {
 		return new CentroInformaticaDTO();
 	}
 	
