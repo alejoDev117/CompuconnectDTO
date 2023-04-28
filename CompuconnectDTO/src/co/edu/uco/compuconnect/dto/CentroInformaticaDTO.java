@@ -14,20 +14,19 @@ public final class CentroInformaticaDTO {
 	private String nombre;
 	private String ubicacion;
 	private boolean poseeVideoBeam;
-	private int equiposComputoActivos;
+
 	
 	
 	
 	
 	
-	public CentroInformaticaDTO(UUID identificador, String nombre, String ubicacion, boolean poseeVideoBeam,
-			int equiposComputoActivos) {
+	public CentroInformaticaDTO(UUID identificador, String nombre, String ubicacion, boolean poseeVideoBeam) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setUbicacion(ubicacion);
 		setPoseeVideoBeam(poseeVideoBeam);
-		setEquiposComputoActivos(equiposComputoActivos);
+		
 	
 	}
 
@@ -40,7 +39,7 @@ public final class CentroInformaticaDTO {
 		setNombre(UtilText.getDefaultValue());
 		setUbicacion(UtilText.getDefaultValue());
 		setPoseeVideoBeam(UtilBoolean.getDefaultValue());
-		setEquiposComputoActivos(UtilNumeric.getDefaultIntValue());
+		
 	}
 	
 	
@@ -87,17 +86,7 @@ public final class CentroInformaticaDTO {
 		
 		
 	}
-	public final int getEquiposComputoActivos() {
-		return equiposComputoActivos;
-	}
 	
-	
-	public final  CentroInformaticaDTO  setEquiposComputoActivos(int equiposComputoActivos) {
-		this.equiposComputoActivos = UtilNumeric.getDefaultValueInt(equiposComputoActivos);
-		return this;
-	}
-	
-
 
 
 
