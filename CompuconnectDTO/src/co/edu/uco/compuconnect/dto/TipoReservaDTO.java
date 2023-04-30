@@ -6,29 +6,29 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
 
-public class TipoDTO {
+public class TipoReservaDTO {
 	
 	private UUID identificador;
 	private String nombre;
-	//private tipo TipoNombre;
+	private String descripcion;
 	
 	
-	public TipoDTO() {
+	public TipoReservaDTO() {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
-		//setTipoNombre("");
+		setDescripcion(descripcion);
 	}
 	
-	public TipoDTO(UUID identificador, String nombre) {  //tipo tipoNombre
+	public TipoReservaDTO(UUID identificador, String nombre, String descripcion) { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());
-	//	setTipoNombre(tiponombre);
+		setDescripcion(UtilText.getDefaultValue());
 	}
 	
-	public static final TipoDTO create() {
-		return new TipoDTO();
+	public static final TipoReservaDTO create() {
+		return new TipoReservaDTO();
 	}
 	
 	
@@ -36,7 +36,7 @@ public class TipoDTO {
 		return identificador;
 	}
 	
-	public final TipoDTO setIdentificador(final UUID identificador) {
+	public final TipoReservaDTO setIdentificador(final UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 		return this;
 	}
@@ -44,16 +44,19 @@ public class TipoDTO {
 		return nombre;
 	}
 	
-	public final TipoDTO setNombre(final String nombre) {
+	public final TipoReservaDTO setNombre(final String nombre) {
 		this.nombre = UtilText.applyTrim(nombre) ;
 		return this;
 	}
-	/*public final TipoDTO getTipoNombre() {
-		return TipoNombre;
+	
+	public final String getDescripcion() {
+		return descripcion;
 	}
-	public final TipoDTO setTipoNombre(final TipoDTO tipoNombre) {
-		TipoNombre = tipoNombre;
-	}*/
+	
+	public final TipoReservaDTO setDescripcion(final String descripcion) {
+		this.descripcion = UtilText.applyTrim(descripcion);
+		return this;
+	}
 	
 	
 
