@@ -40,9 +40,10 @@ public final class SoftwareDTO {
 
 	
 
-	public final SoftwareDTO setIdentificador(final UUID identidicador) {
-		this.identificador = UtilUUID.getDefault(identidicador);
+	public final SoftwareDTO setIdentificador(final UUID identificador) {
+		this.identificador = UtilUUID.getDefault(identificador);
 		return this;
+		
 	}
 
 	
