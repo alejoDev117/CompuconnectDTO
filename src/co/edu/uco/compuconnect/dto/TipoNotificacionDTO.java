@@ -13,14 +13,14 @@ public class TipoNotificacionDTO {
 	private String descripcion;
 	
 	
-	public TipoNotificacionDTO() {
+	public TipoNotificacionDTO(UUID identificador, String nombre, String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
-	public TipoNotificacionDTO(UUID identificador, String nombre, String descripcion) { 
+	public TipoNotificacionDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());

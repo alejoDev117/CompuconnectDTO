@@ -13,14 +13,14 @@ public class TipoReservaDTO {
 	private String descripcion;
 	
 	
-	public TipoReservaDTO() {
+	public TipoReservaDTO(UUID identificador, String nombre, String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
-	public TipoReservaDTO(UUID identificador, String nombre, String descripcion) { 
+	public TipoReservaDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());

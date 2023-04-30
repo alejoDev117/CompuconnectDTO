@@ -13,14 +13,14 @@ public class TipoUsuarioDTO {
 	private String descripcion;
 	
 	
-	public TipoUsuarioDTO() {
+	public TipoUsuarioDTO(UUID identificador, String nombre, String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
-	public TipoUsuarioDTO(UUID identificador, String nombre, String descripcion) { 
+	public TipoUsuarioDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());

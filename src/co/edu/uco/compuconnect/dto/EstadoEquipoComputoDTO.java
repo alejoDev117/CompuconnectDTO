@@ -12,14 +12,14 @@ public class EstadoEquipoComputoDTO {
 	private String descripcion;
 	
 	
-	public EstadoEquipoComputoDTO() {
+	public EstadoEquipoComputoDTO(UUID identificador, String nombre, String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
-	public EstadoEquipoComputoDTO(UUID identificador, String nombre, String descripcion) { 
+	public EstadoEquipoComputoDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());

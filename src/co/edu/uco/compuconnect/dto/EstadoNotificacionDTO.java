@@ -12,14 +12,14 @@ public class EstadoNotificacionDTO {
 	private String descripcion;
 	
 	
-	public EstadoNotificacionDTO() {
+	public EstadoNotificacionDTO(UUID identificador, String nombre, String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
-	public EstadoNotificacionDTO(UUID identificador, String nombre, String descripcion) { 
+	public EstadoNotificacionDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());

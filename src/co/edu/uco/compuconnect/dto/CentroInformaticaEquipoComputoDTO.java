@@ -30,19 +30,9 @@ public class CentroInformaticaEquipoComputoDTO {
 
 	}
 	
-	
-	
-
-
-	public static EquipoComputoDTO create1() {
-		return new EquipoComputoDTO();
+	public static final CentroInformaticaEquipoComputoDTO create() {
+		return new CentroInformaticaEquipoComputoDTO();
 	}
-	
-	
-	public static CentroInformaticaDTO create() {
-		return new CentroInformaticaDTO();
-	}
-	
 	
 	
 	public UUID getIdentificador() {
@@ -69,7 +59,7 @@ public class CentroInformaticaEquipoComputoDTO {
 	}
 	
 	public final CentroInformaticaEquipoComputoDTO setEquipoComputo(final EquipoComputoDTO equipoComputo) {
-		this.equipoComputo = 
+		this.equipoComputo = UtilObject.getDefault(equipoComputo, EquipoComputoDTO.create());
 		return this;
 	}
 	

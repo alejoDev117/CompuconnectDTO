@@ -14,14 +14,14 @@ public class DiaFestivoDTO {
 	private Date fecha;
 	
 	
-	public DiaFestivoDTO() {
+	public DiaFestivoDTO(UUID identificador, String nombre, Date fecha) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setFecha(fecha);
 	}
 	
-	public DiaFestivoDTO(UUID identificador, String nombre, Date fecha) { 
+	public DiaFestivoDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());
@@ -55,7 +55,7 @@ public class DiaFestivoDTO {
 	}
 	
 	public final DiaFestivoDTO setFecha(final Date fecha) {
-		this.fecha = UtilDateTime.getDefault(fecha);
+		this.fecha = UtilDateTime.getDefaultDate(fecha);
 		return this;
 	}
 		

@@ -11,16 +11,15 @@ public class DiaSemanalDTO {
 	
 	private UUID identificador;
 	private String nombre;
-	private Date fecha;
 	
 	
-	public DiaSemanalDTO() {
+	public DiaSemanalDTO(UUID identificador, String nombre) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 	}
 	
-	public DiaSemanalDTO(UUID identificador, String nombre) { 
+	public DiaSemanalDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());

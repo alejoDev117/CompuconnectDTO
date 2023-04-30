@@ -12,14 +12,14 @@ public class EstadoPeriodoFuncionamientoDTO {
 	private String descripcion;
 	
 	
-	public EstadoPeriodoFuncionamientoDTO() {
+	public EstadoPeriodoFuncionamientoDTO(UUID identificador, String nombre, String descripcion) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
-	public EstadoPeriodoFuncionamientoDTO(UUID identificador, String nombre, String descripcion) { 
+	public EstadoPeriodoFuncionamientoDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());

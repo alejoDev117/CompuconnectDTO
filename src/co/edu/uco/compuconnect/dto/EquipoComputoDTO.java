@@ -30,8 +30,8 @@ public class EquipoComputoDTO {
 	}
 	
 	
-	public static EstadoEquipoComputoDTO create() {
-		return new EstadoEquipoComputoDTO();
+	public static EquipoComputoDTO create() {
+		return new EquipoComputoDTO();
 	}
 	
 	
