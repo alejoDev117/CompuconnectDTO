@@ -15,7 +15,7 @@ public class ExcepcionAgendaDTO {
 	private AgendaDTO agenda;
 	
 	
-	public ExcepcionAgendaDTO(UUID identificador, Date fechaInicio, Date fechaFin, LocalTime horaInicio, LocalTime horaFin, FrecuenciaDTO frecuencia, String motivo) {
+	public ExcepcionAgendaDTO(UUID identificador, ExcepcionDTO excepcion, AgendaDTO agenda) {
 		super();
 		setIdentificador(identificador);
 		setExcepcion(excepcion);

@@ -39,8 +39,9 @@ public class CentroInformaticaEquipoComputoDTO {
 		return identificador;
 	}
 	
-	public void setIdentificador(UUID identificador) {
+	public CentroInformaticaEquipoComputoDTO setIdentificador(UUID identificador) {
 		this.identificador = identificador;
+		return this;
 	}
 		
 	public CentroInformaticaDTO getCentroInformatica() {
