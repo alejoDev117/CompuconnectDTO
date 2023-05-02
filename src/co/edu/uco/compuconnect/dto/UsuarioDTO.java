@@ -54,7 +54,7 @@ public final class UsuarioDTO extends DestinatarioDTO {
 
 
 	@Override
-	protected UUID getIdentificador() {
+	public UUID getIdentificador() {
 		return identificador;
 	}
 
@@ -65,46 +65,46 @@ public final class UsuarioDTO extends DestinatarioDTO {
 	}
 
 	@Override
-	protected String getCorreoInstitucional() {
+	public String getCorreoInstitucional() {
 		return correoInstitucional;
 	}
 
 	@Override
-	protected DestinatarioDTO setCorreoInstitucional(String correoInstitucional) {
+	public DestinatarioDTO setCorreoInstitucional(String correoInstitucional) {
 		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
 		return this;
 	}
 
 	@Override
-	protected String getIdentificacion() {
+	public String getIdentificacion() {
 		
 		return identificacion;
 	}
 
 	@Override
-	protected DestinatarioDTO setIdentificacion(String identificacion) {
+	public DestinatarioDTO setIdentificacion(String identificacion) {
 		this.identificacion = UtilText.applyTrim(identificacion);
 		return this;
 	}
 
 	@Override
-	protected TipoIdentificacionDTO getTipoIdentificacion() {
+	public TipoIdentificacionDTO getTipoIdentificacion() {
 		return tipoIdentificacion;
 	}
 
 	@Override
-	protected DestinatarioDTO setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
+	public DestinatarioDTO setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
 		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion, TipoIdentificacionDTO.create());
 		return this;
 	}
 
 	@Override
-	protected String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
 	@Override
-	protected DestinatarioDTO setNombre(String nombre) {
+	public DestinatarioDTO setNombre(String nombre) {
 		this.nombre = UtilText.applyTrim(nombre);
 		return this;
 	}
