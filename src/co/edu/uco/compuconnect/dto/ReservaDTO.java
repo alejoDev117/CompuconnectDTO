@@ -48,47 +48,46 @@ public final class ReservaDTO extends ContenidoDTO{
 		return new ReservaDTO();
 	}
 	
-	@Override
+
 	public UUID getIdentificador() {
 		return identificador;
 	}
 
-	@Override
-	public ContenidoDTO setIdentificador(UUID identificador) {
+
+	public ReservaDTO setIdentificador(UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 		return this;
 	}
 	
 
-	@Override
+	
 	public UsuarioDTO getAutor() {
 		return autor;
 	}
 
-	@Override
-	public ContenidoDTO setAutor(UsuarioDTO autor) {
+	public ReservaDTO setAutor(UsuarioDTO autor) {
 		this.autor = UtilObject.getDefault(autor, UsuarioDTO.create());
 		return this;
 	}
 
-	@Override
+
 	public String getDescripcion() {
 		return descripcion;
 	}
 
-	@Override
-	public ContenidoDTO setDescripcion(String descripcion) {
+
+	public ReservaDTO setDescripcion(String descripcion) {
 		this.descripcion = UtilText.applyTrim(descripcion);
 		return this;
 	}
 
-	@Override
+
 	public Date getHoraCreacion() {
 		return horaCreacion;
 	}
 
-	@Override
-	public ContenidoDTO setHoraCreacion(Date horaCreacion) {
+
+	public ReservaDTO setHoraCreacion(Date horaCreacion) {
 		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
 		return this;
 	}
@@ -99,7 +98,7 @@ public final class ReservaDTO extends ContenidoDTO{
 		return tipoReserva;
 	}
 
-	public final ContenidoDTO setTipoReserva(TipoReservaDTO tipoReserva) {
+	public final ReservaDTO setTipoReserva(TipoReservaDTO tipoReserva) {
 		this.tipoReserva = UtilObject.getDefault(tipoReserva, TipoReservaDTO.create());
 		return this;
 	}
@@ -108,7 +107,7 @@ public final class ReservaDTO extends ContenidoDTO{
 		return fechaInicio;
 	}
 
-	public final ContenidoDTO setFechaInicio(Date fechaInicio) {
+	public final ReservaDTO setFechaInicio(Date fechaInicio) {
 		this.fechaInicio = UtilDateTime.getDefaultDate(fechaInicio);
 		return this;
 	}
@@ -117,7 +116,7 @@ public final class ReservaDTO extends ContenidoDTO{
 		return fechaFin;
 	}
 
-	public final ContenidoDTO setFechaFin(Date fechaFin) {
+	public final ReservaDTO setFechaFin(Date fechaFin) {
 		this.fechaFin = UtilDateTime.getDefaultDate(fechaFin);
 		return this;
 	}
@@ -126,7 +125,7 @@ public final class ReservaDTO extends ContenidoDTO{
 		return frecuencia;
 	}
 
-	public final ContenidoDTO setFrecuencia(FrecuenciaDTO frecuencia) {
+	public final ReservaDTO setFrecuencia(FrecuenciaDTO frecuencia) {
 		this.frecuencia = UtilObject.getDefault(frecuencia, FrecuenciaDTO.create());
 		return this;
 	}
@@ -135,7 +134,7 @@ public final class ReservaDTO extends ContenidoDTO{
 		return centroInformatica;
 	}
 
-	public final ContenidoDTO setCentroInformatica(CentroInformaticaDTO centroInformatica) {
+	public final ReservaDTO setCentroInformatica(CentroInformaticaDTO centroInformatica) {
 		this.centroInformatica = UtilObject.getDefault(centroInformatica, CentroInformaticaDTO.create());
 		return this;
 	}

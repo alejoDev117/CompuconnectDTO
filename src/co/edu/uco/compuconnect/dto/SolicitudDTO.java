@@ -41,46 +41,45 @@ public final class SolicitudDTO extends ContenidoDTO {
 	}
 	
 
-	@Override
+
 	public UUID getIdentificador() {
 		return identificador;
 	}
 
-	@Override
-	public ContenidoDTO setIdentificador(UUID identificador) {
+	
+	public SolicitudDTO setIdentificador(UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 		return this;
 	}
 
-	@Override
 	public UsuarioDTO getAutor() {
 		return autor;
 	}
 
-	@Override
-	public ContenidoDTO setAutor(UsuarioDTO autor) {
+
+	public SolicitudDTO setAutor(UsuarioDTO autor) {
 		this.autor = UtilObject.getDefault(autor, UsuarioDTO.create());
 		return this;
 	}
 
-	@Override
+
 	public String getDescripcion() {
 		return descripcion;
 	}
 
-	@Override
-	public ContenidoDTO setDescripcion(String descripcion) {
+	
+	public SolicitudDTO setDescripcion(String descripcion) {
 		this.descripcion = UtilText.applyTrim(descripcion);
 		return this;
 	}
 
-	@Override
+	
 	public Date getHoraCreacion() {
 		return horaCreacion;
 	}
 
-	@Override
-	public ContenidoDTO setHoraCreacion(Date horaCreacion) {
+	
+	public SolicitudDTO setHoraCreacion(Date horaCreacion) {
 		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
 		return this;
 	}
@@ -89,7 +88,7 @@ public final class SolicitudDTO extends ContenidoDTO {
 		return tipoSolicitud;
 	}
 
-	public final ContenidoDTO setTipoSolicitud(TipoSolicitudDTO tipoSolicitud) {
+	public final SolicitudDTO setTipoSolicitud(TipoSolicitudDTO tipoSolicitud) {
 		this.tipoSolicitud = UtilObject.getDefault(tipoSolicitud, TipoSolicitudDTO.create());
 		return this;
 	}
@@ -98,7 +97,7 @@ public final class SolicitudDTO extends ContenidoDTO {
 		return estadoSolicitud;
 	}
 
-	public final ContenidoDTO setEstadoSolicitud(EstadoSolicitudDTO estadoSolicitud) {
+	public final SolicitudDTO setEstadoSolicitud(EstadoSolicitudDTO estadoSolicitud) {
 		this.estadoSolicitud = UtilObject.getDefault(estadoSolicitud, EstadoSolicitudDTO.create());
 		return this;
 	}

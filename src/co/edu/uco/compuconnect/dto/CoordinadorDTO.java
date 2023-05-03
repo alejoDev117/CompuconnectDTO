@@ -39,71 +39,71 @@ public final class CoordinadorDTO extends PersonaEncargadaDTO {
 	}
 	
 
-	@Override
+
 	public UUID getIdentificador() {
 		return identificador;
 	}
 
-	@Override
-	public DestinatarioDTO setIdentificador(UUID identificador) {
+
+	public CoordinadorDTO setIdentificador(UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
 		return this;
 	}
 
-	@Override
+
 	public String getCorreoInstitucional() {
 		return correoInstitucional;
 	}
 
-	@Override
-	public DestinatarioDTO setCorreoInstitucional(String correoInstitucional) {
+
+	public CoordinadorDTO setCorreoInstitucional(String correoInstitucional) {
 		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
 		return this;
 	}
 
-	@Override
+
 	public String getIdentificacion() {
 		return identificacion;
 	}
 
-	@Override
-	public DestinatarioDTO setIdentificacion(String identificacion) {
+
+	public CoordinadorDTO setIdentificacion(String identificacion) {
 		this.identificacion = UtilText.applyTrim(identificacion);
 		return this;
 	}
 
-	@Override
+
 	public TipoIdentificacionDTO getTipoIdentificacion() {
 
 		return tipoIdentificacion;
 	}
 
-	@Override
-	public DestinatarioDTO setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
+	
+	public CoordinadorDTO setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
 		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion,TipoIdentificacionDTO.create());
 		return this;
 	}
 
-	@Override
+
 	public String getNombre() {
 		return nombre;
 	}
 
-	@Override
-	public DestinatarioDTO setNombre(String nombre) {
+
+	public CoordinadorDTO setNombre(String nombre) {
 		this.nombre = UtilText.applyTrim(nombre);
 		return this;
 	}
 
 
-	@Override
+	
 	public String getNumeroCelular() {
 		return numeroCelular;
 	}
 
 
-	@Override
-	public DestinatarioDTO setNumeroCelular(String numeroCelular) {
+	
+	public CoordinadorDTO setNumeroCelular(String numeroCelular) {
 		this.numeroCelular = UtilText.applyTrim(numeroCelular);
 		return this;
 	}
