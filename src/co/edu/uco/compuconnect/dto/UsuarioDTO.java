@@ -7,10 +7,15 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class UsuarioDTO extends DestinatarioDTO {
+public final class UsuarioDTO {
 	
 	private TipoUsuarioDTO tipoUsuario;
-	
+	private UUID identificador;
+	private String correoInstitucional;
+	private String identificacion;
+	private TipoIdentificacionDTO tipoIdentificacion;
+	private String nombre;
+
 
 	public UsuarioDTO(UUID identificador, TipoUsuarioDTO tipoUsuario, String nombre, TipoIdentificacionDTO tipoIdentificacion, String numeroIdentificacion, String correoInstitucional ) {
 		setIdentificador(identificador);
