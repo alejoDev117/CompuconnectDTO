@@ -1,15 +1,5 @@
 package co.edu.uco.compuconnect.dto;
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-import java.util.UUID;
-
-public class PerfilDTO {
-	
-	private UUID identificador;
-=======
-=======
->>>>>>> Stashed changes
 import java.time.LocalTime;
 import java.util.UUID;
 
@@ -55,8 +45,4 @@ public class PerfilDTO {
 	}
 	
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 }

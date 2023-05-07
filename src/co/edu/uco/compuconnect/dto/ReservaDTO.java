@@ -1,20 +1,30 @@
 package co.edu.uco.compuconnect.dto;
 
+
+
+import java.time.LocalTime;
 import java.util.Date;
 import java.util.UUID;
 
-public class ReservaDTO {
+import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
+import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
+import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
+import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
+
+public final class ReservaDTO{
 	
 	private UUID identificador;
-	private Date fechaIncio;
+	private UsuarioDTO autor;
+	private String descripcion;
+	private LocalTime horaCreacion;
+	private TipoReservaDTO tipoReserva;
+	private Date fechaInicio;
 	private Date fechaFin;
-	private FrecuenciaDTO frecuencia;
+	private  FrecuenciaDTO frecuencia;
 	private CentroInformaticaDTO centroInformatica;
-<<<<<<< Updated upstream
-=======
 	
 
-	public ReservaDTO(UUID identificador, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia, CentroInformaticaDTO centroInformatica,String descripcion, Date horaCreacion) {
+	public ReservaDTO(UUID identificador, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia, CentroInformaticaDTO centroInformatica,String descripcion, LocalTime horaCreacion) {
 		setIdentificador(identificador);
 		setAutor(autor);
 		setTipoReserva(tipoReserva);
@@ -36,7 +46,7 @@ public class ReservaDTO {
 		setFrecuencia(FrecuenciaDTO.create());
 		setCentroInformatica(CentroInformaticaDTO.create());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueDate());
+		setHoraCreacion(UtilDateTime.getDefaultValueLocaltime());
 	}
 	
 	public static final ReservaDTO create() {
@@ -77,13 +87,13 @@ public class ReservaDTO {
 	}
 
 
-	public Date getHoraCreacion() {
+	public LocalTime getHoraCreacion() {
 		return horaCreacion;
 	}
 
 
-	public ReservaDTO setHoraCreacion(Date horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
+	public ReservaDTO setHoraCreacion(LocalTime horaCreacion) {
+		this.horaCreacion = UtilDateTime.getDefaultLocalTime(horaCreacion);
 		return this;
 	}
 
@@ -134,7 +144,6 @@ public class ReservaDTO {
 		return this;
 	}
 	
-	//
->>>>>>> Stashed changes
+	
 
 }

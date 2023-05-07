@@ -16,15 +16,17 @@ public class AgendaDTO {
 	private String nombre;
 	
 	
-	public AgendaDTO(UUID identificador, String nombre, Date fechaInicio, Date fechaFin, DiaFestivoDTO diaFestivo, EstadoPeriodoFuncionamientoDTO estado) {
+	
+
+
+	public AgendaDTO(UUID identificador, PeriodoFuncionamientoDTO periodoFuncionamiento,
+			CentroInformaticaDTO centroInformatica, String nombre) {
 		super();
 		setIdentificador(identificador);
 		setPeriodoFuncionamiento(periodoFuncionamiento);
 		setCentroInformatica(centroInformatica);
 		setNombre(nombre);
-		
 	}
-
 
 	public AgendaDTO() {
 		super();	
@@ -80,8 +82,7 @@ public class AgendaDTO {
 		this.nombre = UtilText.applyTrim(nombre) ;
 		return this;
 	}
-	
-	
-	
+
+
 
 }
