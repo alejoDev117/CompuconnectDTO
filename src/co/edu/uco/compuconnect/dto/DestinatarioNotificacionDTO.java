@@ -8,12 +8,12 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 public final class DestinatarioNotificacionDTO {
 	
 	private UUID identificador;
-	private DestinatarioDTO destinatario;
+	private UsuarioDTO destinatario;
 	private NotificacionDTO notificacion;
 	private EstadoNotificacionDTO estado;
 	
 	
-	public DestinatarioNotificacionDTO(UUID identificador, DestinatarioDTO destinatario, NotificacionDTO notificacion, EstadoNotificacionDTO estado) {
+	public DestinatarioNotificacionDTO(UUID identificador, UsuarioDTO destinatario, NotificacionDTO notificacion, EstadoNotificacionDTO estado) {
 		super();
 		setIdentificador(identificador);
 		setDestinatario(destinatario);
@@ -45,12 +45,12 @@ public final class DestinatarioNotificacionDTO {
 	}
 
 	
-	public final DestinatarioDTO getDestinatario() {
+	public final UsuarioDTO getDestinatario() {
 		return destinatario;
 	}
 
 	
-	public final DestinatarioNotificacionDTO setDestinatario(DestinatarioDTO destinatario) {
+	public final DestinatarioNotificacionDTO setDestinatario(UsuarioDTO destinatario) {
 		this.destinatario = UtilObject.getDefault(destinatario, UsuarioDTO.create());
 		return this;
 	}

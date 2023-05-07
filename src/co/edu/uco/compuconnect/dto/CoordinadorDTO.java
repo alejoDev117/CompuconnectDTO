@@ -7,16 +7,22 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class CoordinadorDTO extends PersonaEncargadaDTO {
+public final class CoordinadorDTO{
+	
+	private String numeroCelular;
+	private UUID identificador;
+	private String correoInstitucional;
+	private String identificacion;
+	private TipoIdentificacionDTO tipoIdentificacion;
+	private String nombre;
 
 	
-	
-	public CoordinadorDTO(UUID identificador, String nombre, TipoIdentificacionDTO tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
+	public CoordinadorDTO(UUID identificador, String nombre, TipoIdentificacionDTO tipoIdentificacion, String identificacion, String correoInstitucional, String numeroCelular) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setTipoIdentificacion(tipoIdentificacion);
-		setIdentificacion(numeroIdentificacion);
+		setIdentificacion(identificacion);
 		setCorreoInstitucional(correoInstitucional);
 		setNumeroCelular(numeroCelular);
 		

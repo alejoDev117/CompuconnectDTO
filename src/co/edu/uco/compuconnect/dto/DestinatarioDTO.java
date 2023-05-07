@@ -7,7 +7,7 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class DestinatarioDTO {
+public class DestinatarioDTO {
 	
 	private UUID identificador;
 	private String correoInstitucional;

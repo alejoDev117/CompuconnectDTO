@@ -1,8 +1,18 @@
 package co.edu.uco.compuconnect.dto;
 
-public abstract class PersonaEncargadaDTO extends DestinatarioDTO {
+import java.util.UUID;
+
+public final class PersonaEncargadaDTO{
 	
-	protected String numeroCelular;
+	private String numeroCelular;
+	private UUID identificador;
+	private String correoInstitucional;
+	private String identificacion;
+	private TipoIdentificacionDTO tipoIdentificacion;
+	private String nombre;
+	
+	
+
 
 	
 	

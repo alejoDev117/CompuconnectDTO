@@ -7,9 +7,14 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class MonitorDTO extends PersonaEncargadaDTO {
+public final class MonitorDTO{
 
-	
+	private String numeroCelular;
+	private UUID identificador;
+	private String correoInstitucional;
+	private String identificacion;
+	private TipoIdentificacionDTO tipoIdentificacion;
+	private String nombre;
 	
 	public MonitorDTO(UUID identificador, String nombre, TipoIdentificacionDTO tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
 		super();
@@ -66,7 +71,7 @@ public final class MonitorDTO extends PersonaEncargadaDTO {
 		return identificacion;
 	}
 
-	public MonitorDTO setIdentificacion(String identificacion) {
+	public MonitorDTO setIdentificacion(String identifiacion) {
 		this.identificacion = UtilText.applyTrim(identificacion);
 		return this;
 	}
@@ -78,7 +83,7 @@ public final class MonitorDTO extends PersonaEncargadaDTO {
 	}
 
 
-	public MonitorDTO setTipoIdentificacion(TipoIdentificacionDTO tipoIdentificacion) {
+	public MonitorDTO setTipoIdentificacion(TipoIdentificacionDTO tipoIdentifiacion) {
 		this.tipoIdentificacion = UtilObject.getDefault(tipoIdentificacion,TipoIdentificacionDTO.create());
 		return this;
 	}
