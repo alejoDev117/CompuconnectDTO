@@ -7,14 +7,15 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class MonitorDTO extends PersonaEncargadaDTO {
+public final class MonitorDTO extends UsuarioDTO {
 
+	private String numeroCelular;
 	
-	
-	public MonitorDTO(UUID identificador, String nombre, TipoIdentificacionDTO tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular) {
+	public MonitorDTO(UUID identificador, String nombre, TipoIdentificacionDTO tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular, TipoUsuarioDTO tipoUsuario) {
 		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
+		setTipoUsuario(tipoUsuario);
 		setTipoIdentificacion(tipoIdentificacion);
 		setIdentificacion(numeroIdentificacion);
 		setCorreoInstitucional(correoInstitucional);
@@ -27,6 +28,7 @@ public final class MonitorDTO extends PersonaEncargadaDTO {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getDefaultValue());
+		setTipoUsuario(TipoUsuarioDTO.create());
 		setTipoIdentificacion(TipoIdentificacionDTO.create());
 		setIdentificacion(UtilText.getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
@@ -107,6 +109,14 @@ public final class MonitorDTO extends PersonaEncargadaDTO {
 		return this;
 	}
 	
+	public TipoUsuarioDTO getTipoUsuario() {
+		return tipoUsuario;
+	}
+	
+	public MonitorDTO setTipoUsuario(TipoUsuarioDTO tipoUsuario) {
+		this.tipoUsuario = UtilObject.getDefault(tipoUsuario, TipoUsuarioDTO.create());
+		return this;
+	} 
 
 
 }

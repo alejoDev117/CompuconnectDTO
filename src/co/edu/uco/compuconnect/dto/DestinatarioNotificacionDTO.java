@@ -23,7 +23,7 @@ public final class DestinatarioNotificacionDTO {
 	
 	public DestinatarioNotificacionDTO() {
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setDestinatario(UsuarioDTO.create());
+		setDestinatario(DestinatarioDTO.create());
 		setNotificacion(NotificacionDTO.create());
 		setEstado(EstadoNotificacionDTO.create());
 	}
@@ -51,7 +51,7 @@ public final class DestinatarioNotificacionDTO {
 
 	
 	public final DestinatarioNotificacionDTO setDestinatario(DestinatarioDTO destinatario) {
-		this.destinatario = UtilObject.getDefault(destinatario, UsuarioDTO.create());
+		this.destinatario = UtilObject.getDefault(destinatario, DestinatarioDTO.create());
 		return this;
 	}
 

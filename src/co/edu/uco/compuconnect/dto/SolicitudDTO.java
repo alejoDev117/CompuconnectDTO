@@ -14,11 +14,12 @@ public final class SolicitudDTO {
 	private UUID identificador;
 	private UsuarioDTO autor;
 	private String descripcion;
-	private LocalTime horaCreacion;
+	private Date horaCreacion;
 	private TipoSolicitudDTO tipoSolicitud;
 	private EstadoSolicitudDTO estadoSolicitud;
+
 	
-	public SolicitudDTO(UUID identificador, UsuarioDTO autor, TipoSolicitudDTO tipoSolicitud, String descripcion, LocalTime horaCreacion, EstadoSolicitudDTO estadoSolicitud) {
+	public SolicitudDTO(UUID identificador, UsuarioDTO autor, TipoSolicitudDTO tipoSolicitud, String descripcion, Date horaCreacion, EstadoSolicitudDTO estadoSolicitud) {
 		setIdentificador(identificador);
 		setAutor(autor);
 		setTipoSolicitud(tipoSolicitud);
@@ -35,7 +36,7 @@ public final class SolicitudDTO {
 		setAutor(UsuarioDTO.create());
 		setTipoSolicitud(TipoSolicitudDTO.create());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueLocaltime());
+		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 		setEstadoSolicitud(EstadoSolicitudDTO.create());
 		
 	}
@@ -79,13 +80,13 @@ public final class SolicitudDTO {
 	}
 
 	
-	public LocalTime getHoraCreacion() {
+	public Date getHoraCreacion() {
 		return horaCreacion;
 	}
 
 	
-	public SolicitudDTO setHoraCreacion(LocalTime horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultLocalTime(horaCreacion);
+	public SolicitudDTO setHoraCreacion(Date horaCreacion) {
+		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
 		return this;
 	}
 

@@ -29,7 +29,7 @@ public class HorarioPersonaEncargadaDTO {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setTiempoFuncionamiento(TiempoFuncionamientoCentroInformaticaDTO.create());
-		setPersonaEncargada(CoordinadorDTO.create());
+		setPersonaEncargada(PersonaEncargadaDTO.create());
 		setHoraInicio(UtilDateTime.getDefaultValueLocaltime());
 		setHoraFin(UtilDateTime.getDefaultValueLocaltime());
 	}
@@ -59,7 +59,7 @@ public class HorarioPersonaEncargadaDTO {
 		return personaEncargada;
 	}
 	public final HorarioPersonaEncargadaDTO setPersonaEncargada(PersonaEncargadaDTO personaEncargada) {
-		this.personaEncargada = UtilObject.getDefault(personaEncargada, CoordinadorDTO.create());
+		this.personaEncargada = UtilObject.getDefault(personaEncargada, PersonaEncargadaDTO.create());
 		return this;
 	}
 	public final LocalTime getHoraInicio() {

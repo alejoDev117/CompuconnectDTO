@@ -7,9 +7,14 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
-public final class UsuarioDTO extends DestinatarioDTO {
+public class UsuarioDTO {
 	
-	private TipoUsuarioDTO tipoUsuario;
+	protected UUID identificador;
+	protected TipoUsuarioDTO tipoUsuario;
+	protected String nombre;
+	protected TipoIdentificacionDTO tipoIdentificacion;
+	protected String identificacion;
+	protected String correoInstitucional;
 	
 
 	public UsuarioDTO(UUID identificador, TipoUsuarioDTO tipoUsuario, String nombre, TipoIdentificacionDTO tipoIdentificacion, String numeroIdentificacion, String correoInstitucional ) {
@@ -33,19 +38,19 @@ public final class UsuarioDTO extends DestinatarioDTO {
 		
 	}
 	
-	public static final UsuarioDTO create() {
+	public static UsuarioDTO create() {
 		return new UsuarioDTO();
 	}
 	
 	
-	public final TipoUsuarioDTO getTipoUsuario() {
+	public  TipoUsuarioDTO getTipoUsuario() {
 		return tipoUsuario;
 	}
 
 
 
 
-	public final UsuarioDTO setTipoUsuario(TipoUsuarioDTO tipoUsuario) {
+	public  UsuarioDTO setTipoUsuario(TipoUsuarioDTO tipoUsuario) {
 		this.tipoUsuario = UtilObject.getDefault(tipoUsuario, TipoUsuarioDTO.create());
 		return this;
 	}

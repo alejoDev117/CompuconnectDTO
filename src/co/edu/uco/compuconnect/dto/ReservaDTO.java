@@ -14,17 +14,17 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 public final class ReservaDTO{
 	
 	private UUID identificador;
-	private UsuarioDTO autor;
 	private String descripcion;
-	private LocalTime horaCreacion;
 	private TipoReservaDTO tipoReserva;
 	private Date fechaInicio;
 	private Date fechaFin;
 	private  FrecuenciaDTO frecuencia;
 	private CentroInformaticaDTO centroInformatica;
+	private Date horaCreacion;
+	private UsuarioDTO autor;
 	
 
-	public ReservaDTO(UUID identificador, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia, CentroInformaticaDTO centroInformatica,String descripcion, LocalTime horaCreacion) {
+	public ReservaDTO(UUID identificador, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia, CentroInformaticaDTO centroInformatica,String descripcion, Date horaCreacion) {
 		setIdentificador(identificador);
 		setAutor(autor);
 		setTipoReserva(tipoReserva);
@@ -46,7 +46,7 @@ public final class ReservaDTO{
 		setFrecuencia(FrecuenciaDTO.create());
 		setCentroInformatica(CentroInformaticaDTO.create());
 		setDescripcion(UtilText.getDefaultValue());
-		setHoraCreacion(UtilDateTime.getDefaultValueLocaltime());
+		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 	}
 	
 	public static final ReservaDTO create() {
@@ -58,6 +58,15 @@ public final class ReservaDTO{
 		return identificador;
 	}
 
+
+	public final Date getHoraCreacion() {
+		return horaCreacion;
+	}
+
+	public final ReservaDTO setHoraCreacion(Date horaCreacion) {
+		this.horaCreacion = UtilDateTime.getDefaultDate(horaCreacion);
+		return this;
+	}
 
 	public ReservaDTO setIdentificador(UUID identificador) {
 		this.identificador = UtilUUID.getDefault(identificador);
@@ -85,18 +94,6 @@ public final class ReservaDTO{
 		this.descripcion = UtilText.applyTrim(descripcion);
 		return this;
 	}
-
-
-	public LocalTime getHoraCreacion() {
-		return horaCreacion;
-	}
-
-
-	public ReservaDTO setHoraCreacion(LocalTime horaCreacion) {
-		this.horaCreacion = UtilDateTime.getDefaultLocalTime(horaCreacion);
-		return this;
-	}
-
 	
 	
 	public final TipoReservaDTO getTipoReserva() {
