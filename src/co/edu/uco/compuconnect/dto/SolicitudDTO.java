@@ -40,7 +40,7 @@ public final class SolicitudDTO {
 		setEstadoSolicitud(EstadoSolicitudDTO.create());
 		
 	}
-	
+	//
 	
 	public static final SolicitudDTO create() {
 		return new SolicitudDTO();
