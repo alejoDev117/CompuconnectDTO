@@ -82,17 +82,6 @@ public final class SoftwareEquipoComputoDTO {
 
 
 
-
-	@Override
-	public String toString() {
-		return "SoftwareEquipoComputoDTO [identificador=" + identificador + ", software=" + software
-				+ ", equipoComputo=" + equipoComputo + "]";
-	}
-	
-	
-	public static void main(String[] args) {
-		System.out.println(SoftwareEquipoComputoDTO.create());
-	}
 	
 	
 
