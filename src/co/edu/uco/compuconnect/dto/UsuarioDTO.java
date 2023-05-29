@@ -31,9 +31,9 @@ public class UsuarioDTO {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setTipoUsuario(TipoUsuarioDTO.create());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setTipoIdentificacion(TipoIdentificacionDTO.create());
-		setIdentificacion(UtilText.getDefaultValue());
+		setIdentificacion(UtilText.getUtilText().getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
 		
 	}
@@ -76,7 +76,7 @@ public class UsuarioDTO {
 
 
 	public UsuarioDTO setCorreoInstitucional(String correoInstitucional) {
-		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
+		this.correoInstitucional = UtilText.getUtilText().applyTrim(correoInstitucional);
 		return this;
 	}
 
@@ -88,7 +88,7 @@ public class UsuarioDTO {
 
 
 	public UsuarioDTO setIdentificacion(String identificacion) {
-		this.identificacion = UtilText.applyTrim(identificacion);
+		this.identificacion = UtilText.getUtilText().applyTrim(identificacion);
 		return this;
 	}
 
@@ -110,7 +110,7 @@ public class UsuarioDTO {
 
 
 	public UsuarioDTO setNombre(String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		return this;
 	}
 

@@ -21,9 +21,9 @@ public class PersonaEncargadaDTO {
 
     public PersonaEncargadaDTO() {
         setIdentificador(UtilUUID.getDefaultUuid());
-        setNombre(UtilText.getDefaultValue());
-        setCorreoInstitucional(UtilText.getDefaultValue());
-        setNumeroCelular(UtilText.getDefaultValue());
+        setNombre(UtilText.getUtilText().getDefaultValue());
+        setCorreoInstitucional(UtilText.getUtilText().getDefaultValue());
+        setNumeroCelular(UtilText.getUtilText().getDefaultValue());
     }
 
     public static PersonaEncargadaDTO create() {
@@ -44,7 +44,7 @@ public class PersonaEncargadaDTO {
     }
 
     public PersonaEncargadaDTO setNombre(String nombre) {
-        this.nombre = UtilText.applyTrim(nombre);
+        this.nombre = UtilText.getUtilText().applyTrim(nombre);
         return this;
     }
 
@@ -53,7 +53,7 @@ public class PersonaEncargadaDTO {
     }
 
     public PersonaEncargadaDTO setCorreoInstitucional(String correoInstitucional) {
-        this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
+        this.correoInstitucional = UtilText.getUtilText().applyTrim(correoInstitucional);
         return this;
     }
 
@@ -62,7 +62,7 @@ public class PersonaEncargadaDTO {
     }
 
     public PersonaEncargadaDTO setNumeroCelular(String numeroCelular) {
-        this.numeroCelular = UtilText.applyTrim(numeroCelular);
+        this.numeroCelular = UtilText.getUtilText().applyTrim(numeroCelular);
         return this;
     }
 }

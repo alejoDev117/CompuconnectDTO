@@ -27,7 +27,7 @@ public final class RespuestaDTO {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(CoordinadorDTO.create());
-		setObservacion(UtilText.getDefaultValue());
+		setObservacion(UtilText.getUtilText().getDefaultValue());
 		setFecha(UtilDateTime.getDefaultValueDate());
 	}
 	
@@ -64,7 +64,7 @@ public final class RespuestaDTO {
 
 	
 	public final RespuestaDTO setObservacion(final String observacion) {
-		this.observacion = UtilText.applyTrim(observacion);
+		this.observacion = UtilText.getUtilText().applyTrim(observacion);
 		return this;
 	}
 

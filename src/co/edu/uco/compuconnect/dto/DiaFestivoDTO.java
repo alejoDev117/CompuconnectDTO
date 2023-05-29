@@ -24,7 +24,7 @@ public class DiaFestivoDTO {
 	public DiaFestivoDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setFecha(UtilDateTime.getDefaultValueDate());
 	}
 	
@@ -46,7 +46,7 @@ public class DiaFestivoDTO {
 	}
 	
 	public final DiaFestivoDTO setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 		return this;
 	}
 	

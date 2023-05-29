@@ -23,8 +23,8 @@ public class TipoUsuarioDTO {
 	public TipoUsuarioDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
-		setDescripcion(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setDescripcion(UtilText.getUtilText().getDefaultValue());
 	}
 	
 	public static final TipoUsuarioDTO create() {
@@ -45,7 +45,7 @@ public class TipoUsuarioDTO {
 	}
 	
 	public final TipoUsuarioDTO setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 		return this;
 	}
 	
@@ -54,7 +54,7 @@ public class TipoUsuarioDTO {
 	}
 	
 	public final TipoUsuarioDTO setDescripcion(final String descripcion) {
-		this.descripcion = UtilText.applyTrim(descripcion);
+		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		return this;
 	}
 	

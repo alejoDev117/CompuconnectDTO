@@ -45,7 +45,7 @@ public final class ReservaDTO{
 		setFechaFin(UtilDateTime.getDefaultValueDate());
 		setFrecuencia(FrecuenciaDTO.create());
 		setCentroInformatica(CentroInformaticaDTO.create());
-		setDescripcion(UtilText.getDefaultValue());
+		setDescripcion(UtilText.getUtilText().getDefaultValue());
 		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 	}
 	
@@ -91,7 +91,7 @@ public final class ReservaDTO{
 
 
 	public ReservaDTO setDescripcion(String descripcion) {
-		this.descripcion = UtilText.applyTrim(descripcion);
+		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		return this;
 	}
 	
@@ -142,5 +142,5 @@ public final class ReservaDTO{
 	}
 	
 	
-//
+
 }

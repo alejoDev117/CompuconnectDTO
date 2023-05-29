@@ -35,7 +35,7 @@ public final class SolicitudDTO {
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(UsuarioDTO.create());
 		setTipoSolicitud(TipoSolicitudDTO.create());
-		setDescripcion(UtilText.getDefaultValue());
+		setDescripcion(UtilText.getUtilText().getDefaultValue());
 		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 		setEstadoSolicitud(EstadoSolicitudDTO.create());
 		
@@ -75,7 +75,7 @@ public final class SolicitudDTO {
 
 	
 	public SolicitudDTO setDescripcion(String descripcion) {
-		this.descripcion = UtilText.applyTrim(descripcion);
+		this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
 		return this;
 	}
 

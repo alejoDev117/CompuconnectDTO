@@ -18,8 +18,8 @@ public class DestinatarioDTO {
 
     public DestinatarioDTO() {
         setIdentificador(UtilUUID.getDefaultUuid());
-        setNombre(UtilText.getDefaultValue());
-        setCorreo(UtilText.getDefaultValue());
+        setNombre(UtilText.getUtilText().getDefaultValue());
+        setCorreo(UtilText.getUtilText().getDefaultValue());
     }
 
     public static DestinatarioDTO create() {
@@ -40,7 +40,7 @@ public class DestinatarioDTO {
     }
 
     public DestinatarioDTO setNombre(String nombre) {
-        this.nombre = UtilText.applyTrim(nombre);
+        this.nombre = UtilText.getUtilText().applyTrim(nombre);
         return this;
     }
 
@@ -49,7 +49,7 @@ public class DestinatarioDTO {
     }
 
     public DestinatarioDTO setCorreo(String correo) {
-        this.correo = UtilText.applyTrim(correo);
+        this.correo = UtilText.getUtilText().applyTrim(correo);
         return this;
     }
 }

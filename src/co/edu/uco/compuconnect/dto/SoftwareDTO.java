@@ -23,8 +23,8 @@ public final class SoftwareDTO {
 	public SoftwareDTO() {
 		super();	
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
-		setVersion(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setVersion(UtilText.getUtilText().getDefaultValue());
 		}
 	
 	
@@ -55,7 +55,7 @@ public final class SoftwareDTO {
 	
 
 	public final SoftwareDTO setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		return this;
 	}
 
@@ -68,7 +68,7 @@ public final class SoftwareDTO {
 
 	
 	public final SoftwareDTO setVersion(final String version) {
-		this.version = UtilText.applyTrim(version);
+		this.version = UtilText.getUtilText().applyTrim(version);
 		return this;
 	}
 	

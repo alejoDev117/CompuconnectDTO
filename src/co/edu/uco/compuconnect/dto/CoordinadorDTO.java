@@ -27,12 +27,12 @@ public final class CoordinadorDTO extends UsuarioDTO {
 	public CoordinadorDTO() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setTipoUsuario(TipoUsuarioDTO.create());
 		setTipoIdentificacion(TipoIdentificacionDTO.create());
-		setIdentificacion(UtilText.getDefaultValue());
+		setIdentificacion(UtilText.getUtilText().getDefaultValue());
 		setCorreoInstitucional(UtilMail.getDefaultValueMail());
-		setNumeroCelular(UtilText.getDefaultValue());
+		setNumeroCelular(UtilText.getUtilText().getDefaultValue());
 		
 	}
 	
@@ -59,7 +59,7 @@ public final class CoordinadorDTO extends UsuarioDTO {
 
 
 	public CoordinadorDTO setCorreoInstitucional(String correoInstitucional) {
-		this.correoInstitucional = UtilText.applyTrim(correoInstitucional);
+		this.correoInstitucional = UtilText.getUtilText().applyTrim(correoInstitucional);
 		return this;
 	}
 
@@ -70,7 +70,7 @@ public final class CoordinadorDTO extends UsuarioDTO {
 
 
 	public CoordinadorDTO setIdentificacion(String identificacion) {
-		this.identificacion = UtilText.applyTrim(identificacion);
+		this.identificacion = UtilText.getUtilText().applyTrim(identificacion);
 		return this;
 	}
 
@@ -93,7 +93,7 @@ public final class CoordinadorDTO extends UsuarioDTO {
 
 
 	public CoordinadorDTO setNombre(String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		return this;
 	}
 
@@ -106,7 +106,7 @@ public final class CoordinadorDTO extends UsuarioDTO {
 
 	
 	public CoordinadorDTO setNumeroCelular(String numeroCelular) {
-		this.numeroCelular = UtilText.applyTrim(numeroCelular);
+		this.numeroCelular = UtilText.getUtilText().applyTrim(numeroCelular);
 		return this;
 	}
 	

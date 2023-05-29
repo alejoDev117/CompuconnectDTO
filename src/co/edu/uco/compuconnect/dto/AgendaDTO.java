@@ -33,7 +33,7 @@ public class AgendaDTO {
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setPeriodoFuncionamiento(PeriodoFuncionamientoDTO.create());
 		setCentroInformatica(CentroInformaticaDTO.create());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		
 		
 	}
@@ -79,7 +79,7 @@ public class AgendaDTO {
 		return nombre;
 	}
 	public final AgendaDTO setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 		return this;
 	}
 

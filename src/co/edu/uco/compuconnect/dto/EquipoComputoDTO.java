@@ -24,7 +24,7 @@ public class EquipoComputoDTO {
 	public EquipoComputoDTO() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setEstado(EstadoEquipoComputoDTO.create());
 
 	}
@@ -52,7 +52,7 @@ public class EquipoComputoDTO {
 	
 	
 	public final EquipoComputoDTO setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 		return this;
 	}
 	

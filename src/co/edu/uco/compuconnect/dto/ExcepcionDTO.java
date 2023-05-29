@@ -40,7 +40,7 @@ public class ExcepcionDTO {
 		setHoraInicio(UtilDateTime.getDefaultValueLocaltime());
 		setHoraFin(UtilDateTime.getDefaultValueLocaltime());
 		setFrecuencia(FrecuenciaDTO.create());
-		
+		setMotivo(UtilText.getUtilText().getDefaultValue());
 		
 		}
 	
@@ -109,7 +109,7 @@ public class ExcepcionDTO {
 	}
 	
 	public final ExcepcionDTO setMotivo(final String motivo) {
-		this.motivo = UtilText.applyTrim(motivo);
+		this.motivo = UtilText.getUtilText().applyTrim(motivo);
 		return this;
 	}
 	

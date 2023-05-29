@@ -36,8 +36,8 @@ public final class CentroInformaticaDTO {
 	public CentroInformaticaDTO() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
-		setUbicacion(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
+		setUbicacion(UtilText.getUtilText().getDefaultValue());
 		setPoseeVideoBeam(UtilBoolean.getDefaultValue());
 		
 	}
@@ -62,7 +62,7 @@ public final class CentroInformaticaDTO {
 	}
 	
 	public final  CentroInformaticaDTO  setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		return this;
 	}
 	
@@ -70,7 +70,7 @@ public final class CentroInformaticaDTO {
 		return ubicacion;
 	}
 	public final  CentroInformaticaDTO  setUbicacion(final String ubicacion) {
-		this.ubicacion = UtilText.applyTrim(ubicacion);
+		this.ubicacion = UtilText.getUtilText().applyTrim(ubicacion);
 		return this;
 	}
 	

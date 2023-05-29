@@ -22,7 +22,7 @@ public class DiaSemanalDTO {
 	public DiaSemanalDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 	}
 	
 	public static final DiaSemanalDTO create() {
@@ -43,7 +43,7 @@ public class DiaSemanalDTO {
 	}
 	
 	public final DiaSemanalDTO setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre) ;
+		this.nombre = UtilText.getUtilText().applyTrim(nombre) ;
 		return this;
 	}
 	

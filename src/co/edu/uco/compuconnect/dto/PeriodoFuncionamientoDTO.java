@@ -33,7 +33,7 @@ public class PeriodoFuncionamientoDTO {
 	public PeriodoFuncionamientoDTO() {
 		super();	
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setNombre(UtilText.getDefaultValue());
+		setNombre(UtilText.getUtilText().getDefaultValue());
 		setFechaInicio(UtilDateTime.getDefaultValueDate());
 		setFechaFin(UtilDateTime.getDefaultValueDate());
 		setDiaFestivo(DiaFestivoDTO.create());
@@ -62,7 +62,7 @@ public class PeriodoFuncionamientoDTO {
 	}
 	
 	public final PeriodoFuncionamientoDTO setNombre(final String nombre) {
-		this.nombre = UtilText.applyTrim(nombre);
+		this.nombre = UtilText.getUtilText().applyTrim(nombre);
 		return this;
 	}
 	

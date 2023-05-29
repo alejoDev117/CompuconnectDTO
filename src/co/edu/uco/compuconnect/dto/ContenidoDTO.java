@@ -16,7 +16,7 @@ public class ContenidoDTO {
 
     public ContenidoDTO() {
         setIdentificador(UtilUUID.getDefaultUuid());
-        setDescripcion(UtilText.getDefaultValue());
+        setDescripcion(UtilText.getUtilText().getDefaultValue());
     }
 
     public static ContenidoDTO create() {
@@ -37,7 +37,7 @@ public class ContenidoDTO {
     }
 
     public ContenidoDTO setDescripcion(String descripcion) {
-        this.descripcion = UtilText.applyTrim(descripcion);
+        this.descripcion = UtilText.getUtilText().applyTrim(descripcion);
         return this;
     }
 }
