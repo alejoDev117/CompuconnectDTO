@@ -1,9 +1,7 @@
 package co.edu.uco.compuconnect.dto;
 
-import java.util.Date;
 import java.util.UUID;
 
-import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
@@ -21,15 +19,13 @@ public class AgendaDTO {
 
 	public AgendaDTO(UUID identificador, PeriodoFuncionamientoDTO periodoFuncionamiento,
 			CentroInformaticaDTO centroInformatica, String nombre) {
-		super();
 		setIdentificador(identificador);
 		setPeriodoFuncionamiento(periodoFuncionamiento);
 		setCentroInformatica(centroInformatica);
 		setNombre(nombre);
 	}
 
-	public AgendaDTO() {
-		super();	
+	public AgendaDTO() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setPeriodoFuncionamiento(PeriodoFuncionamientoDTO.create());
 		setCentroInformatica(CentroInformaticaDTO.create());
@@ -59,7 +55,7 @@ public class AgendaDTO {
 		return periodoFuncionamiento;
 	}
 	
-	public final AgendaDTO setPeriodoFuncionamiento(final PeriodoFuncionamientoDTO centroInformatica) {
+	public final AgendaDTO setPeriodoFuncionamiento(final PeriodoFuncionamientoDTO periodoFuncionamiento) {
 		this.periodoFuncionamiento = UtilObject.getDefault(periodoFuncionamiento, PeriodoFuncionamientoDTO.create());
 		return this;
 	}
