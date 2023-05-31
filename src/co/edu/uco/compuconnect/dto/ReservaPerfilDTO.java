@@ -1,6 +1,5 @@
 package co.edu.uco.compuconnect.dto;
 
-import java.time.LocalTime;
 import java.util.UUID;
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
@@ -15,7 +14,6 @@ public class ReservaPerfilDTO {
 	
 	
 	public ReservaPerfilDTO(final UUID identificador, final ReservaDTO reserva, final PerfilDTO perfil) {
-		super();
 		setIdentificador(identificador);
 		setReserva(reserva);
 		setPerfil(perfil);
@@ -23,7 +21,6 @@ public class ReservaPerfilDTO {
 	}
 	
 	public ReservaPerfilDTO() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setReserva(ReservaDTO.create());
 		setPerfil(PerfilDTO.create());

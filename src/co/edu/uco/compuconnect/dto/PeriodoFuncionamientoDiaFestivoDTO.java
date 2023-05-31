@@ -12,9 +12,7 @@ public final class PeriodoFuncionamientoDiaFestivoDTO {
 	private DiaFestivoDTO diaFestivo;
 	
 	
-	public PeriodoFuncionamientoDiaFestivoDTO(UUID identificador, PeriodoFuncionamientoDTO periodoFuncionamiento,
-			DiaFestivoDTO diaFestivo) {
-		super();
+	public PeriodoFuncionamientoDiaFestivoDTO(UUID identificador, PeriodoFuncionamientoDTO periodoFuncionamiento, DiaFestivoDTO diaFestivo) {
 		setIdentificador(identificador);
 		setPeriodoFuncionamiento(periodoFuncionamiento);
 		setDiaFestivo(diaFestivo);
@@ -22,7 +20,6 @@ public final class PeriodoFuncionamientoDiaFestivoDTO {
 
 
 	public PeriodoFuncionamientoDiaFestivoDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setPeriodoFuncionamiento(PeriodoFuncionamientoDTO.create());
 		setDiaFestivo(DiaFestivoDTO.create());

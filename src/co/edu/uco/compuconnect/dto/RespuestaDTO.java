@@ -16,7 +16,6 @@ public final class RespuestaDTO {
 	private Date fecha;
 	
 	public RespuestaDTO(UUID identificador, CoordinadorDTO autor, String observacion, Date fecha) {
-		super();
 		setIdentificador(identificador);
 		setAutor(autor);
 		setObservacion(observacion);
@@ -24,7 +23,6 @@ public final class RespuestaDTO {
 	}
 	
 	public RespuestaDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(CoordinadorDTO.create());
 		setObservacion(UtilText.getUtilText().getDefaultValue());

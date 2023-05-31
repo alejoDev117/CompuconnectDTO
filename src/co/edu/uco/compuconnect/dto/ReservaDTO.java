@@ -1,8 +1,5 @@
 package co.edu.uco.compuconnect.dto;
 
-
-
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.UUID;
 

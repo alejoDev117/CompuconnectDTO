@@ -20,7 +20,6 @@ public class PeriodoFuncionamientoDTO {
 	
 	
 	public PeriodoFuncionamientoDTO(UUID identificador, String nombre, Date fechaInicio, Date fechaFin, DiaFestivoDTO diaFestivo, EstadoPeriodoFuncionamientoDTO estado) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setFechaInicio(fechaInicio);
@@ -30,8 +29,7 @@ public class PeriodoFuncionamientoDTO {
 	}
 
 
-	public PeriodoFuncionamientoDTO() {
-		super();	
+	public PeriodoFuncionamientoDTO() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setFechaInicio(UtilDateTime.getDefaultValueDate());
