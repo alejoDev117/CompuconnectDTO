@@ -13,14 +13,12 @@ public final class BuzonSolicitudDTO {
 	
 	
 	public BuzonSolicitudDTO(UUID identificador, SolicitudDTO solicitud, RespuestaDTO respuesta) {
-		super();
 		setIdentificador(identificador);
 		setSolicitud(solicitud);
 		setRespuesta(respuesta);
 	}
 	
 	public BuzonSolicitudDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setSolicitud(SolicitudDTO.create());
 		setRespuesta(RespuestaDTO.create());

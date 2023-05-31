@@ -3,7 +3,6 @@ package co.edu.uco.compuconnect.dto;
 import java.util.UUID;
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
 public class CentroInformaticaEquipoComputoDTO {
@@ -14,7 +13,6 @@ public class CentroInformaticaEquipoComputoDTO {
 	
 	
 	public CentroInformaticaEquipoComputoDTO(final UUID identificador,final CentroInformaticaDTO centroInformatica,final EquipoComputoDTO equipoComputo) {
-		super();
 		setIdentificador(identificador);
 		setCentroInformatica(centroInformatica);
 		setEquipoComputo(equipoComputo);
@@ -23,7 +21,6 @@ public class CentroInformaticaEquipoComputoDTO {
 	
 	
 	public CentroInformaticaEquipoComputoDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setCentroInformatica(CentroInformaticaDTO.create());
 		setEquipoComputo(EquipoComputoDTO.create());

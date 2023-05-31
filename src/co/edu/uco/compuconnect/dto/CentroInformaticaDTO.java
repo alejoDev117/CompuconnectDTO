@@ -3,8 +3,6 @@ package co.edu.uco.compuconnect.dto;
 import java.util.UUID;
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilBoolean;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilNumeric;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
@@ -16,12 +14,7 @@ public final class CentroInformaticaDTO {
 	private boolean poseeVideoBeam;
 
 	
-	
-	
-	
-	
 	public CentroInformaticaDTO(UUID identificador, String nombre, String ubicacion, boolean poseeVideoBeam) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setUbicacion(ubicacion);
@@ -30,11 +23,7 @@ public final class CentroInformaticaDTO {
 	
 	}
 
-
-
-
 	public CentroInformaticaDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setUbicacion(UtilText.getUtilText().getDefaultValue());
