@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
 public class DetalleReservaDTO {
@@ -18,7 +17,6 @@ public class DetalleReservaDTO {
 	
 	
 	public DetalleReservaDTO(final UUID identificador, final ReservaDTO reserva, final DiaSemanalDTO dia, LocalTime horaInicio, LocalTime horFin) {
-		super();
 		setIdentificador(identificador);
 		setReserva(reserva);
 		setDia(dia);
@@ -27,7 +25,6 @@ public class DetalleReservaDTO {
 	}
 	
 	public DetalleReservaDTO() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setReserva(ReservaDTO.create());
 		setDia(DiaSemanalDTO.create());

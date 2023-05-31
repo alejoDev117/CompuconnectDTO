@@ -14,7 +14,6 @@ public final class DestinatarioNotificacionDTO {
 	
 	
 	public DestinatarioNotificacionDTO(UUID identificador, DestinatarioDTO destinatario, NotificacionDTO notificacion, EstadoNotificacionDTO estado) {
-		super();
 		setIdentificador(identificador);
 		setDestinatario(destinatario);
 		setNotificacion(notificacion);
