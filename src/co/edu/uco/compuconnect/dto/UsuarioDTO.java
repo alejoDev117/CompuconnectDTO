@@ -28,7 +28,6 @@ public class UsuarioDTO {
 	}
 	
 	public UsuarioDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setTipoUsuario(TipoUsuarioDTO.create());
 		setNombre(UtilText.getUtilText().getDefaultValue());
