@@ -1,9 +1,7 @@
 package co.edu.uco.compuconnect.dto;
 
-import java.time.LocalTime;
 import java.util.UUID;
 
-import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
@@ -14,13 +12,11 @@ public class PerfilDTO {
 	
 	
 	public PerfilDTO(final UUID identificador, UsuarioDTO usuario) {
-		super();
 		setIdentificador(identificador);
 		setUsuario(usuario);
 	}
 	
 	public PerfilDTO() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setUsuario(UsuarioDTO.create());
 	}

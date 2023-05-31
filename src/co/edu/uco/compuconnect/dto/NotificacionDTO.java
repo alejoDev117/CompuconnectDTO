@@ -15,9 +15,7 @@ public final class NotificacionDTO {
 	private TipoNotificacionDTO tiponotificacion;
 	
 	
-	public NotificacionDTO(UUID identificador, ContenidoDTO contenido, Date fecha,
-			TipoNotificacionDTO tiponotificacion) {
-		super();
+	public NotificacionDTO(UUID identificador, ContenidoDTO contenido, Date fecha, TipoNotificacionDTO tiponotificacion) {
 		setIdentificador(identificador);
 		setContenido(contenido);
 		setFecha(fecha);
@@ -25,7 +23,6 @@ public final class NotificacionDTO {
 	}
 	
 	public NotificacionDTO(){
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setContenido(ContenidoDTO.create());
 		setFecha(UtilDateTime.getDefaultValueDate());

@@ -17,7 +17,6 @@ public class HorarioPersonaEncargadaDTO {
 	
 	
 	public HorarioPersonaEncargadaDTO(final UUID identificador, TiempoFuncionamientoCentroInformaticaDTO tiempoFuncionamiento, PersonaEncargadaDTO personaEncargada, LocalTime horaInicio, LocalTime horaFin) {
-		super();
 		setIdentificador(identificador);
 		setTiempoFuncionamiento(tiempoFuncionamiento);
 		setPersonaEncargada(personaEncargada);
@@ -26,7 +25,6 @@ public class HorarioPersonaEncargadaDTO {
 	}
 	
 	public HorarioPersonaEncargadaDTO() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setTiempoFuncionamiento(TiempoFuncionamientoCentroInformaticaDTO.create());
 		setPersonaEncargada(PersonaEncargadaDTO.create());

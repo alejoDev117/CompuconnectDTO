@@ -12,7 +12,6 @@ public final class MonitorDTO extends UsuarioDTO {
 	private String numeroCelular;
 	
 	public MonitorDTO(UUID identificador, String nombre, TipoIdentificacionDTO tipoIdentificacion, String numeroIdentificacion, String correoInstitucional, String numeroCelular, TipoUsuarioDTO tipoUsuario) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setTipoUsuario(tipoUsuario);
@@ -25,7 +24,6 @@ public final class MonitorDTO extends UsuarioDTO {
 	
 	
 	public MonitorDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setTipoUsuario(TipoUsuarioDTO.create());
