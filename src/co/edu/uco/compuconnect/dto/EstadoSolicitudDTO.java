@@ -13,14 +13,12 @@ public class EstadoSolicitudDTO {
 	
 	
 	public EstadoSolicitudDTO(UUID identificador, String nombre, String descripcion) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setDescripcion(descripcion);
 	}
 	
 	public EstadoSolicitudDTO() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());

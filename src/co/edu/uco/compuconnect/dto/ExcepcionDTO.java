@@ -20,7 +20,6 @@ public class ExcepcionDTO {
 	private String motivo;
 	
 	public ExcepcionDTO(UUID identificador, Date fechaInicio, Date fechaFin, LocalTime horaInicio, LocalTime horaFin, FrecuenciaDTO frecuencia, String motivo) {
-		super();
 		setIdentificador(identificador);
 		setFechaInicio(fechaInicio);
 		setFechaFin(fechaFin);
@@ -32,8 +31,7 @@ public class ExcepcionDTO {
 	}
 
 
-	public ExcepcionDTO() {
-		super();	
+	public ExcepcionDTO() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setFechaInicio(UtilDateTime.getDefaultValueDate());
 		setFechaFin(UtilDateTime.getDefaultValueDate());

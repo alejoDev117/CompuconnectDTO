@@ -1,10 +1,8 @@
 package co.edu.uco.compuconnect.dto;
 
-import java.time.LocalTime;
-import java.util.Date;
+
 import java.util.UUID;
 
-import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
@@ -16,7 +14,6 @@ public class ExcepcionAgendaDTO {
 	
 	
 	public ExcepcionAgendaDTO(UUID identificador, ExcepcionDTO excepcion, AgendaDTO agenda) {
-		super();
 		setIdentificador(identificador);
 		setExcepcion(excepcion);
 		setAgenda(agenda);
@@ -24,8 +21,7 @@ public class ExcepcionAgendaDTO {
 	}
 
 
-	public ExcepcionAgendaDTO() {
-		super();	
+	public ExcepcionAgendaDTO() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setExcepcion(ExcepcionDTO.create());
 		setAgenda(AgendaDTO.create());
