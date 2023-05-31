@@ -13,7 +13,6 @@ public class AgendaReservaDTO {
 	
 	
 	public AgendaReservaDTO(final UUID identificador, AgendaDTO agenda, ReservaDTO reserva) {
-		super();
 		setIdentificador(identificador);
 		setAgenda(agenda);
 		setReserva(reserva);
@@ -21,7 +20,6 @@ public class AgendaReservaDTO {
 	}
 	
 	public AgendaReservaDTO() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAgenda(AgendaDTO.create());
 		setReserva(ReservaDTO.create());
