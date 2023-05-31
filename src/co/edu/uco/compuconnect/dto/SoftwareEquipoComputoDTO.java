@@ -15,7 +15,6 @@ public final class SoftwareEquipoComputoDTO {
 	
 	
 	public SoftwareEquipoComputoDTO(UUID identificador, SoftwareDTO software, EquipoComputoDTO equipoComputo) {
-		super();
 		setIdentificador(identificador);
 		setSoftware(software);
 		setEquipoComputo(equipoComputo);
@@ -25,7 +24,6 @@ public final class SoftwareEquipoComputoDTO {
 
 
 	public SoftwareEquipoComputoDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setSoftware(SoftwareDTO.create());
 		setEquipoComputo(EquipoComputoDTO.create());

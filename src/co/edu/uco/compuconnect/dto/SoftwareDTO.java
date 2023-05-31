@@ -13,15 +13,13 @@ public final class SoftwareDTO {
 	
 	
 	public SoftwareDTO(UUID identificador, String nombre, String version) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setVersion(version);
 	}
 
 
-	public SoftwareDTO() {
-		super();	
+	public SoftwareDTO() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setVersion(UtilText.getUtilText().getDefaultValue());

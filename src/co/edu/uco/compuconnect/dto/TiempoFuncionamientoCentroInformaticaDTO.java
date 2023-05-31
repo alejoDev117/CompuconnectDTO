@@ -1,12 +1,10 @@
 package co.edu.uco.compuconnect.dto;
 
 import java.time.LocalTime;
-import java.util.Date;
 import java.util.UUID;
 
 import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilObject;
-import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
 public class TiempoFuncionamientoCentroInformaticaDTO {
@@ -20,7 +18,6 @@ public class TiempoFuncionamientoCentroInformaticaDTO {
 	
 	
 	public TiempoFuncionamientoCentroInformaticaDTO(UUID identificador, PeriodoFuncionamientoDTO periodoFuncionamiento,CentroInformaticaDTO centroInformatica, DiaSemanalDTO dia,LocalTime horaInicio, LocalTime horaFin) {
-		super();
 		setIdentificador(identificador);
 		setPeriodoFuncionamiento(periodoFuncionamiento);
 		setCentroInformatica(centroInformatica);
@@ -32,8 +29,7 @@ public class TiempoFuncionamientoCentroInformaticaDTO {
 	}
 
 
-	public TiempoFuncionamientoCentroInformaticaDTO() {
-		super();	
+	public TiempoFuncionamientoCentroInformaticaDTO() {	
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setPeriodoFuncionamiento(PeriodoFuncionamientoDTO.create());
 		setCentroInformatica(CentroInformaticaDTO.create());

@@ -1,6 +1,5 @@
 package co.edu.uco.compuconnect.dto;
 
-import java.time.LocalTime;
 import java.util.Date;
 import java.util.UUID;
 
@@ -31,7 +30,6 @@ public final class SolicitudDTO {
 	
 	
 	public SolicitudDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setAutor(UsuarioDTO.create());
 		setTipoSolicitud(TipoSolicitudDTO.create());
@@ -40,7 +38,7 @@ public final class SolicitudDTO {
 		setEstadoSolicitud(EstadoSolicitudDTO.create());
 		
 	}
-	//
+
 	
 	public static final SolicitudDTO create() {
 		return new SolicitudDTO();
