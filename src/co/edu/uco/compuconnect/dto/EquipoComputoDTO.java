@@ -13,7 +13,6 @@ public class EquipoComputoDTO {
 	private EstadoEquipoComputoDTO estado;
 	
 	public EquipoComputoDTO(final UUID identificador,final String nombre,final EstadoEquipoComputoDTO estado) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setEstado(estado);
@@ -22,7 +21,6 @@ public class EquipoComputoDTO {
 	
 	
 	public EquipoComputoDTO() {
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setEstado(EstadoEquipoComputoDTO.create());

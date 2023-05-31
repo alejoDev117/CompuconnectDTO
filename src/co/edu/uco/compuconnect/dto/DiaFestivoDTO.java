@@ -15,14 +15,12 @@ public class DiaFestivoDTO {
 	
 	
 	public DiaFestivoDTO(UUID identificador, String nombre, Date fecha) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 		setFecha(fecha);
 	}
 	
 	public DiaFestivoDTO() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 		setFecha(UtilDateTime.getDefaultValueDate());

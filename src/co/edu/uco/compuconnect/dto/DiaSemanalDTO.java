@@ -1,9 +1,7 @@
 package co.edu.uco.compuconnect.dto;
 
-import java.util.Date;
 import java.util.UUID;
 
-import co.edu.uco.compuconnect.crosscutting.utils.UtilDateTime;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilText;
 import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 
@@ -14,13 +12,11 @@ public class DiaSemanalDTO {
 	
 	
 	public DiaSemanalDTO(UUID identificador, String nombre) {
-		super();
 		setIdentificador(identificador);
 		setNombre(nombre);
 	}
 	
 	public DiaSemanalDTO() { 
-		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setNombre(UtilText.getUtilText().getDefaultValue());
 	}
