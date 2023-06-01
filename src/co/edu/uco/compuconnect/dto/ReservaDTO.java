@@ -1,5 +1,7 @@
 package co.edu.uco.compuconnect.dto;
 
+
+
 import java.util.Date;
 import java.util.UUID;
 
@@ -11,24 +13,24 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 public final class ReservaDTO{
 	
 	private UUID identificador;
+	private AgendaDTO agenda;
 	private String descripcion;
 	private TipoReservaDTO tipoReserva;
 	private Date fechaInicio;
 	private Date fechaFin;
 	private  FrecuenciaDTO frecuencia;
-	private CentroInformaticaDTO centroInformatica;
 	private Date horaCreacion;
 	private UsuarioDTO autor;
 	
 
-	public ReservaDTO(UUID identificador, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia, CentroInformaticaDTO centroInformatica,String descripcion, Date horaCreacion) {
+	public ReservaDTO(UUID identificador,AgendaDTO agenda, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia, CentroInformaticaDTO centroInformatica,String descripcion, Date horaCreacion) {
 		setIdentificador(identificador);
+		setAgenda(agenda);
 		setAutor(autor);
 		setTipoReserva(tipoReserva);
 		setFechaInicio(FechaInicio);
 		setFechaFin(FechaFin);
 		setFrecuencia(frecuencia);
-		setCentroInformatica(centroInformatica);
 		setDescripcion(descripcion);
 		setHoraCreacion(horaCreacion);
 	}
@@ -36,12 +38,12 @@ public final class ReservaDTO{
 	public ReservaDTO() {
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
+		setAgenda(AgendaDTO.create());
 		setAutor(UsuarioDTO.create());
 		setTipoReserva(TipoReservaDTO.create());
 		setFechaInicio(UtilDateTime.getDefaultValueDate());
 		setFechaFin(UtilDateTime.getDefaultValueDate());
 		setFrecuencia(FrecuenciaDTO.create());
-		setCentroInformatica(CentroInformaticaDTO.create());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 		setHoraCreacion(UtilDateTime.getDefaultValueDate());
 	}
@@ -129,15 +131,15 @@ public final class ReservaDTO{
 		return this;
 	}
 
-	public final CentroInformaticaDTO getCentroInformatica() {
-		return centroInformatica;
-	}
 
-	public final ReservaDTO setCentroInformatica(CentroInformaticaDTO centroInformatica) {
-		this.centroInformatica = UtilObject.getDefault(centroInformatica, CentroInformaticaDTO.create());
+	public final ReservaDTO setAgenda(AgendaDTO agenda) {
+		this.agenda = UtilObject.getDefault(agenda, AgendaDTO.create());
 		return this;
 	}
 	
-	
+	public final AgendaDTO getAgenda() {
+		return agenda;
+	}
+
 
 }
