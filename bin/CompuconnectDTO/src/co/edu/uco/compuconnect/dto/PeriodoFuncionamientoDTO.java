@@ -81,8 +81,8 @@ public class PeriodoFuncionamientoDTO {
 		return fechaFin;
 	}
 	
-	public final PeriodoFuncionamientoDTO setFechaFin(final Date fechaInicio) {
-		this.fechaFin = UtilDateTime.getDefaultDate(fechaFin);
+	public final PeriodoFuncionamientoDTO setFechaFin(final Date fechafin) {
+		this.fechaFin = UtilDateTime.getDefaultDate(fechafin);
 		return this;
 	}
 	
