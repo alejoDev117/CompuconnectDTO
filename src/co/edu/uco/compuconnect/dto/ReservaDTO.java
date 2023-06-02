@@ -24,10 +24,9 @@ public final class ReservaDTO{
 	private DetalleReservaDTO detalle;
 	
 
-	public ReservaDTO(UUID identificador,AgendaDTO agenda, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia,String descripcion, Date horaCreacion,
+	public ReservaDTO(UUID identificador, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia,String descripcion, Date horaCreacion,AgendaDTO agenda,
 			DetalleReservaDTO detalle) {
 		setIdentificador(identificador);
-		setAgenda(agenda);
 		setAutor(autor);
 		setTipoReserva(tipoReserva);
 		setFechaInicio(FechaInicio);
@@ -35,6 +34,7 @@ public final class ReservaDTO{
 		setFrecuencia(frecuencia);
 		setDescripcion(descripcion);
 		setHoraCreacion(horaCreacion);
+		setAgenda(agenda);
 		setDetalle(detalle);
 	}
 	
