@@ -10,15 +10,13 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 public class DetalleReservaDTO {
 
 	private UUID identificador;
-	private ReservaDTO reserva;
 	private DiaSemanalDTO dia;
 	private LocalTime horaInicio;
 	private LocalTime horFin;
 	
 	
-	public DetalleReservaDTO(final UUID identificador, final ReservaDTO reserva, final DiaSemanalDTO dia, LocalTime horaInicio, LocalTime horFin) {
+	public DetalleReservaDTO(final UUID identificador, final DiaSemanalDTO dia, LocalTime horaInicio, LocalTime horFin) {
 		setIdentificador(identificador);
-		setReserva(reserva);
 		setDia(dia);
 		setHoraInicio(horaInicio);
 		setHorFin(horFin);
@@ -26,7 +24,6 @@ public class DetalleReservaDTO {
 	
 	public DetalleReservaDTO() { 
 		setIdentificador(UtilUUID.getDefaultUuid());
-		setReserva(ReservaDTO.create());
 		setDia(DiaSemanalDTO.create());
 		setHoraInicio(UtilDateTime.getDefaultValueLocaltime());
 		setHorFin(UtilDateTime.getDefaultValueLocaltime());
@@ -45,14 +42,7 @@ public class DetalleReservaDTO {
 		return this;
 		
 	}
-	public ReservaDTO getReserva() {
-		return reserva;
-	}
-	public DetalleReservaDTO setReserva(final ReservaDTO reserva) {
-		this.reserva = UtilObject.getDefault(reserva, ReservaDTO.create());
-		return this;
-		
-	}
+
 	public DiaSemanalDTO getDia() {
 		return dia;
 	}

@@ -21,9 +21,11 @@ public final class ReservaDTO{
 	private  FrecuenciaDTO frecuencia;
 	private Date horaCreacion;
 	private UsuarioDTO autor;
+	private DetalleReservaDTO detalle;
 	
 
-	public ReservaDTO(UUID identificador,AgendaDTO agenda, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia, CentroInformaticaDTO centroInformatica,String descripcion, Date horaCreacion) {
+	public ReservaDTO(UUID identificador,AgendaDTO agenda, UsuarioDTO autor, TipoReservaDTO tipoReserva, Date FechaInicio, Date FechaFin,FrecuenciaDTO frecuencia,String descripcion, Date horaCreacion,
+			DetalleReservaDTO detalle) {
 		setIdentificador(identificador);
 		setAgenda(agenda);
 		setAutor(autor);
@@ -33,6 +35,7 @@ public final class ReservaDTO{
 		setFrecuencia(frecuencia);
 		setDescripcion(descripcion);
 		setHoraCreacion(horaCreacion);
+		setDetalle(detalle);
 	}
 	
 	public ReservaDTO() {
@@ -46,6 +49,7 @@ public final class ReservaDTO{
 		setFrecuencia(FrecuenciaDTO.create());
 		setDescripcion(UtilText.getUtilText().getDefaultValue());
 		setHoraCreacion(UtilDateTime.getDefaultValueDate());
+		setDetalle(DetalleReservaDTO.create());
 	}
 	
 	public static final ReservaDTO create() {
@@ -139,6 +143,15 @@ public final class ReservaDTO{
 	
 	public final AgendaDTO getAgenda() {
 		return agenda;
+	}
+
+	public final DetalleReservaDTO getDetalle() {
+		return detalle;
+	}
+
+	public final ReservaDTO setDetalle(DetalleReservaDTO detalle) {
+		this.detalle = UtilObject.getDefault(detalle, DetalleReservaDTO.create());
+		return this;
 	}
 
 
