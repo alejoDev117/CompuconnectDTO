@@ -26,7 +26,7 @@ public class DetalleReservaDTO {
 		setHorFin(horFin);
 	}
 	
-	public DetalleReservaDTO() { 
+	private DetalleReservaDTO() { 
 		super();
 		setIdentificador(UtilUUID.getDefaultUuid());
 		setReserva(ReservaDTO.create());
@@ -48,14 +48,15 @@ public class DetalleReservaDTO {
 		return this;
 		
 	}
-	public ReservaDTO getReserva() {
-		return reserva;
-	}
 	public DetalleReservaDTO setReserva(final ReservaDTO reserva) {
 		this.reserva = UtilObject.getDefault(reserva, ReservaDTO.create());
 		return this;
-		
 	}
+	
+	public ReservaDTO getReserva() {
+		return reserva;
+	}
+	
 	public DiaSemanalDTO getDia() {
 		return dia;
 	}

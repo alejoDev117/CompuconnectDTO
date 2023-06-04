@@ -10,23 +10,26 @@ import co.edu.uco.compuconnect.crosscutting.utils.UtilUUID;
 public class DetalleReservaDTO {
 
 	private UUID identificador;
+	private ReservaDTO reserva;
 	private DiaSemanalDTO dia;
 	private LocalTime horaInicio;
-	private LocalTime horFin;
+	private LocalTime horaFin;
 	
 	
-	public DetalleReservaDTO(final UUID identificador, final DiaSemanalDTO dia, LocalTime horaInicio, LocalTime horFin) {
+	public DetalleReservaDTO(final UUID identificador,ReservaDTO reserva, final DiaSemanalDTO dia, LocalTime horaInicio, LocalTime horaFin) {
 		setIdentificador(identificador);
+		setReserva(reserva);
 		setDia(dia);
 		setHoraInicio(horaInicio);
-		setHorFin(horFin);
+		setHoraFin(horaFin);
 	}
 	
 	public DetalleReservaDTO() { 
 		setIdentificador(UtilUUID.getDefaultUuid());
+		setReserva(reserva);
 		setDia(DiaSemanalDTO.create());
 		setHoraInicio(UtilDateTime.getDefaultValueLocaltime());
-		setHorFin(UtilDateTime.getDefaultValueLocaltime());
+		setHoraFin(UtilDateTime.getDefaultValueLocaltime());
 	}
 	
 	public static final DetalleReservaDTO create() {
@@ -58,13 +61,23 @@ public class DetalleReservaDTO {
 		this.horaInicio = UtilDateTime.getDefaultLocalTime(horaInicio);
 		return this;
 	}
-	public LocalTime getHorFin() {
-		return horFin;
+	public LocalTime getHoraFin() {
+		return horaFin;
 	}
-	public DetalleReservaDTO setHorFin(final LocalTime horFin) {
-		this.horFin = UtilDateTime.getDefaultLocalTime(horFin);
+	public DetalleReservaDTO setHoraFin(final LocalTime horFin) {
+		this.horaFin = UtilDateTime.getDefaultLocalTime(horFin);
 		return this;
 	}
+
+	public final ReservaDTO getReserva() {
+		return reserva;
+	}
+
+	public final DetalleReservaDTO setReserva(ReservaDTO reserva) {
+		this.reserva = UtilObject.getDefault(reserva, ReservaDTO.create());
+		return this;
+	}
+	
 	
 	
 	
