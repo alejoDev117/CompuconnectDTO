@@ -64,8 +64,8 @@ public class DetalleReservaDTO {
 	public LocalTime getHoraFin() {
 		return horaFin;
 	}
-	public DetalleReservaDTO setHoraFin(final LocalTime horFin) {
-		this.horaFin = UtilDateTime.getDefaultLocalTime(horFin);
+	public DetalleReservaDTO setHoraFin(final LocalTime horaFin) {
+		this.horaFin = UtilDateTime.getDefaultLocalTime(horaFin);
 		return this;
 	}
 
